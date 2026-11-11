@@ -11,6 +11,7 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Tailwind CSS CDN -->
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -99,7 +100,7 @@
             <!-- Brand Logo -->
             <a href="#" class="flex items-center gap-3 group">
                 <div class="w-10 h-10 rounded-full bg-terracotta flex items-center justify-center text-cream text-lg font-serif font-bold shadow-lg transform group-hover:rotate-12 transition-transform duration-300">
-                    <i class="fa-solid font-bold">A</i>
+                    <i class="fa-solid font-bold">K</i>
                 </div>
                 <div class="flex flex-col">
                     <span class="font-serif text-2xl font-bold tracking-wider text-cream group-hover:text-gold transition-colors">Kalye Cafe</span>
@@ -111,17 +112,12 @@
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
                 <a href="#hero" class="text-cream hover:text-gold transition-colors duration-200">Home</a>
                 <a href="#menu" class="text-espresso-200 hover:text-gold transition-colors duration-200">Menu</a>
-                <a href="#story" class="text-espresso-200 hover:text-gold transition-colors duration-200">Our Craft</a>
-                <a href="#quiz" class="text-espresso-200 hover:text-gold transition-colors duration-200">Brew Finder</a>
                 <a href="#location" class="text-espresso-200 hover:text-gold transition-colors duration-200">Location</a>
             </nav>
 
             <!-- Action Buttons & Cart Toggle -->
             <div class="flex items-center space-x-4">
-                <button id="cart-toggle-btn" class="relative p-2.5 rounded-full bg-espresso-800 hover:bg-espresso-500/30 text-cream transition-colors duration-200 focus:outline-none" aria-label="View Cart">
-                    <i class="fa-solid fa-bag-shopping text-lg"></i>
-                    <span id="cart-badge" class="absolute -top-1 -right-1 bg-terracotta text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center hidden">0</span>
-                </button>
+                
                 <a href="#menu" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-terracotta hover:bg-terracotta-hover text-cream text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-terracotta/20 transform hover:-translate-y-0.5">
                     Order Ahead
                 </a>
@@ -137,8 +133,6 @@
         <div id="mobile-menu" class="hidden md:hidden bg-espresso-900/95 border-b border-espresso-800 px-4 pt-2 pb-6 space-y-3">
             <a href="#hero" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-cream hover:bg-espresso-800">Home</a>
             <a href="#menu" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-espresso-200 hover:bg-espresso-800">Menu</a>
-            <a href="#story" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-espresso-200 hover:bg-espresso-800">Our Craft</a>
-            <a href="#quiz" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-espresso-200 hover:bg-espresso-800">Brew Finder</a>
             <a href="#location" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-espresso-200 hover:bg-espresso-800">Location</a>
         </div>
     </header>
@@ -161,7 +155,7 @@
                     </h1>
                     
                     <p class="text-espresso-200 text-base sm:text-lg max-w-xl mx-auto md:mx-0 font-light leading-relaxed">
-                     baby kapet sundo(t) kita...
+                     Proverbs 16:3 "Commit your work to the Lord, and your plans will be established."
                     </p>
 
                     <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
@@ -201,7 +195,7 @@
                                 <i class="fa-solid fa-award text-lg"></i>
                             </div>
                             <div>
-                                <p class="text-xs font-bold text-cream">Barista Champion 2025</p>
+                                <p class="text-xs font-bold text-cream">WEBSITE PROJECT</p>
                                 <p class="text-[10px] text-espresso-200">Crafted with Precision</p>
                             </div>
                         </div>
@@ -221,24 +215,513 @@
                 <h2 class="font-serif text-3xl sm:text-5xl font-bold text-cream mt-2">Our CAFE Menu</h2>
                 <p class="text-espresso-200 mt-3 text-sm sm:text-base">Handcrafted drinks, slow pour-overs, and freshly baked pastries delivered daily from our bakery partners.</p>
             </div>
+           <!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalye Cafe - Menu & Cart</title>
+    <!-- FontAwesome para sa mga icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* RGB Animated Button */
+        .btn-order {
+            background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff0000);
+            background-size: 400%;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            animation: rgbAnimation 8s linear infinite;
+            transition: transform 0.2s;
+        }
 
-            <!-- Filter Buttons -->
-            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12" id="menu-filters">
-                <button data-filter="all" class="menu-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-terracotta text-white shadow-md">All Offerings</button>
-                <button data-filter="espresso" class="menu-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-espresso-800 text-espresso-200 hover:text-cream hover:bg-espresso-500/30">Espresso & Coffee</button>
-                <button data-filter="signature" class="menu-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-espresso-800 text-espresso-200 hover:text-cream hover:bg-espresso-500/30">Signature Brews</button>
-                <button data-filter="tea" class="menu-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-espresso-800 text-espresso-200 hover:text-cream hover:bg-espresso-500/30">Teas & Botanicals</button>
-                <button data-filter="pastry" class="menu-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-espresso-800 text-espresso-200 hover:text-cream hover:bg-espresso-500/30">Pastries</button>
+        .btn-order:hover {
+            transform: scale(1.03);
+        }
+
+        @keyframes rgbAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .empty-cart {
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="bg-neutral-900 text-white font-sans min-h-screen p-4 sm:p-6">
+
+    <h1 class="text-3xl font-bold text-center text-rose-400 mb-8">☕ KALYE CAFE COLLECTION</h1>
+
+    <!-- Main Wrapper (Products + Cart Drawer) -->
+    <div class="max-w-7xl mx-auto flex flex-col gap-8">
+
+        <!-- Left Side: Menu Filters & Product Grid -->
+        <div class="w-full">
+            
+            <!-- Filter Buttons (Naka-center at naka-align nang maayos) -->
+            <div class="flex flex-wrap justify-center items-center gap-3 mb-10" id="menu-filters">
+                <button id="filter-hot" onclick="filterMenu('hot')" class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-neutral-700 bg-orange-600 text-white hover:bg-orange-700 transition-all shadow-md flex items-center gap-2">
+                    <i class="fa-solid fa-mug-hot text-white text-lg"></i>
+                    <span>Espresso & Coffee (Hot)</span>
+                </button>
+
+                <button id="filter-signature" onclick="filterMenu('signature')" class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-neutral-700 bg-neutral-800 text-gray-300 hover:bg-orange-600 hover:text-white transition-all shadow-md flex items-center gap-2">
+                    <i class="fa-solid fa-mug-saucer text-lg"></i>
+                    <span>Signature Brews</span>
+                </button>
+
+                <button id="filter-tea" onclick="filterMenu('tea')" class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-neutral-700 bg-neutral-800 text-gray-300 hover:bg-orange-600 hover:text-white transition-all shadow-md flex items-center gap-2">
+                    <i class="fa-solid fa-leaf text-lg"></i>
+                    <span>Teas & Botanicals</span>
+                </button>
+
+                <button id="filter-pastry" onclick="filterMenu('pastry')" class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-neutral-700 bg-neutral-800 text-gray-300 hover:bg-orange-600 hover:text-white transition-all shadow-md flex items-center gap-2">
+                    <i class="fa-solid fa-cookie-bite text-lg"></i>
+                    <span>Pastries</span>
+                </button>
             </div>
 
             <!-- Menu Grid Container -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="menu-grid">
-                <!-- Dynamically populated via JS -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="menu-grid">
+                
+                <!-- === HOT COFFEE ITEMS === -->
+                <div class="card bg-neutral-800 p-4 rounded-xl border border-neutral-700 flex flex-col justify-between" data-category="hot">
+                    <div>
+                        <img src="LokoAmericano1.jpg" alt="Loko Americano" class="w-full h-48 object-cover rounded-lg mb-4 bg-neutral-700" onerror="this.src='https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=500'">
+                        <div class="text-lg font-bold">Loko Americano</div>
+                        <div class="text-rose-400 font-bold mb-4">₱60.00</div>
+                    </div>
+                    <button class="btn-order" onclick="addToCart('Loko Americano', 60, 'LokoAmericano1.jpg')">ORDER NOW</button>
+                </div>
+
+                <div class="card bg-neutral-800 p-4 rounded-xl border border-neutral-700 flex flex-col justify-between" data-category="hot">
+                    <div>
+                        <img src="KantoBarako1.jpg" alt="Kanto Barako" class="w-full h-48 object-cover rounded-lg mb-4 bg-neutral-700" onerror="this.src='https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=500'">
+                        <div class="text-lg font-bold">Kanto Barako</div>
+                        <div class="text-rose-400 font-bold mb-4">₱70.00</div>
+                    </div>
+                    <button class="btn-order" onclick="addToCart('Kanto Barako', 70, 'KantoBarako1.jpg')">ORDER NOW</button>
+                </div>
+
+                <div class="card bg-neutral-800 p-4 rounded-xl border border-neutral-700 flex flex-col justify-between" data-category="hot">
+                    <div>
+                        <img src="CaramelMacchiato1.jpg" alt="Caramel Macchiato" class="w-full h-48 object-cover rounded-lg mb-4 bg-neutral-700" onerror="this.src='https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500'">
+                        <div class="text-lg font-bold">Caramel Macchiato</div>
+                        <div class="text-rose-400 font-bold mb-4">₱90.00</div>
+                    </div>
+                    <button class="btn-order" onclick="addToCart('Caramel Macchiato', 90, 'CaramelMacchiato1.jpg')">ORDER NOW</button>
+                </div>
+
+                <div class="card bg-neutral-800 p-4 rounded-xl border border-neutral-700 flex flex-col justify-between" data-category="hot">
+                    <div>
+                        <img src="Mochalye1.jpg" alt="Mochalye" class="w-full h-48 object-cover rounded-lg mb-4 bg-neutral-700" onerror="this.src='https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=500'">
+                        <div class="text-lg font-bold">Mochalye</div>
+                        <div class="text-rose-400 font-bold mb-4">₱85.00</div>
+                    </div>
+                    <button class="btn-order" onclick="addToCart('Mochalye', 85, 'Mochalye1.jpg')">ORDER NOW</button>
+                </div>
+
+                <div class="card bg-neutral-800 p-4 rounded-xl border border-neutral-700 flex flex-col justify-between" data-category="hot">
+                    <div>
+                        <img src="TambayLatte1.jpg" alt="Tambay Latte" class="w-full h-48 object-cover rounded-lg mb-4 bg-neutral-700" onerror="this.src='https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500'">
+                        <div class="text-lg font-bold">Tambay Latte</div>
+                        <div class="text-rose-400 font-bold mb-4">₱80.00</div>
+                    </div>
+                    <button class="btn-order" onclick="addToCart('Tambay Latte', 80, 'TambayLatte1.jpg')">ORDER NOW</button>
+                </div>
+
+
+                <!-- === SIGNATURE BREWS ITEMS === -->
+                <div class="card bg-neutral-800 p-4 rounded-xl border border-neutral-700 flex flex-col justify-between hidden" data-category="signature">
+                    <div>
+                        <img src="KapengOtits1.jpg" alt="Kapeng Otits" class="w-full h-48 object-cover rounded-lg mb-4 bg-neutral-700" onerror="this.src='https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500'">
+                        <div class="text-lg font-bold">Kapeng Otits</div>
+                        <div class="text-rose-400 font-bold mb-4">₱110.00</div>
+                    </div>
+                    <button class="btn-order" onclick="addToCart('Kapeng Otits', 110, 'KapengOtits1.jpg')">ORDER NOW</button>
+                </div>
+
+                <div class="card bg-neutral-800 p-4 rounded-xl border border-neutral-700 flex flex-col justify-between hidden" data-category="signature">
+                    <div>
+                        <img src="KapengAuntie1.jpg" alt="Kapeng Auntie" class="w-full h-48 object-cover rounded-lg mb-4 bg-neutral-700" onerror="this.src='https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500'">
+                        <div class="text-lg font-bold">Kapeng Auntie</div>
+                        <div class="text-rose-400 font-bold mb-4">₱125.00</div>
+                    </div>
+                    <button class="btn-order" onclick="addToCart('Kapeng Auntie', 125, 'KapengAuntie1.jpg')">ORDER NOW</button>
+                </div>
+
+                <div class="card bg-neutral-800 p-4 rounded-xl border border-neutral-700 flex flex-col justify-between hidden" data-category="signature">
+                    <div>
+                        <img src="MangoChikito1.jpg" alt="Mango Chikito" class="w-full h-48 object-cover rounded-lg mb-4 bg-neutral-700" onerror="this.src='https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500'">
+                        <div class="text-lg font-bold">Mango Chikito</div>
+                        <div class="text-rose-400 font-bold mb-4">₱120.00</div>
+                    </div>
+                    <button class="btn-order" onclick="addToCart('Mango Chikito', 120, 'MangoChikito1.jpg')">ORDER NOW</button>
+                </div>
+
+                <div class="card bg-neutral-800 p-4 rounded-xl border border-neutral-700 flex flex-col justify-between hidden" data-category="signature">
+                    <div>
+                        <img src="BerryMerry1.jpg" alt="Berry Merry" class="w-full h-48 object-cover rounded-lg mb-4 bg-neutral-700" onerror="this.src='https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500'">
+                        <div class="text-lg font-bold">Berry Merry</div>
+                        <div class="text-rose-400 font-bold mb-4">₱125.00</div>
+                    </div>
+                    <button class="btn-order" onclick="addToCart('Berry Merry', 125, 'BerryMerry1.jpg')">ORDER NOW</button>
+                </div>
+
+
+                <!-- === TEAS & BOTANICALS ITEMS === -->
+                <div class="card bg-neutral-800 p-4 rounded-xl border border-neutral-700 flex flex-col justify-between hidden" data-category="tea">
+                    <div>
+                        <img src="AsimKilig4.jpg" alt="Asim Kilig" class="w-full h-48 object-cover rounded-lg mb-4 bg-neutral-700" onerror="this.src='https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=500'">
+                        <div class="text-lg font-bold text-white">Asim Kilig</div>
+                        <div class="text-rose-400 font-bold mb-4">₱80.00</div>
+                    </div>
+                    <button class="btn-order" onclick="addToCart('Asim Kilig', 80, 'AsimKilig4.jpg')">ORDER NOW</button>
+                </div>
+
+                <div class="card bg-neutral-800 p-4 rounded-xl border border-neutral-700 flex flex-col justify-between hidden" data-category="tea">
+                    <div>
+                        <img src="Honey4.jpg" alt="Honey" class="w-full h-48 object-cover rounded-lg mb-4 bg-neutral-700" onerror="this.src='https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=500'">
+                        <div class="text-lg font-bold text-white">Honey</div>
+                        <div class="text-rose-400 font-bold mb-4">₱95.00</div>
+                    </div>
+                    <button class="btn-order" onclick="addToCart('Honey', 95, 'Honey4.jpg')">ORDER NOW</button>
+                </div>
+
+                <div class="card bg-neutral-800 p-4 rounded-xl border border-neutral-700 flex flex-col justify-between hidden" data-category="tea">
+                    <div>
+                        <img src="PeachAbo4.jpg" alt="Peach Abo" class="w-full h-48 object-cover rounded-lg mb-4 bg-neutral-700" onerror="this.src='https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=500'">
+                        <div class="text-lg font-bold text-white">Peach Abo</div>
+                        <div class="text-rose-400 font-bold mb-4">₱110.00</div>
+                    </div>
+                    <button class="btn-order" onclick="addToCart('Peach Abo', 110, 'PeachAbo4.jpg')">ORDER NOW</button>
+                </div>
+
+                <div class="card bg-neutral-800 p-4 rounded-xl border border-neutral-700 flex flex-col justify-between hidden" data-category="tea">
+                    <div>
+                        <img src="MathcaMuna4.jpg" alt="Matcha Muna" class="w-full h-48 object-cover rounded-lg mb-4 bg-neutral-700" onerror="this.src='https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=500'">
+                        <div class="text-lg font-bold text-white">Matcha Muna</div>
+                        <div class="text-rose-400 font-bold mb-4">₱115.00</div>
+                    </div>
+                    <button class="btn-order" onclick="addToCart('Matcha Muna', 115, 'MatchaMuna4.jpg')">ORDER NOW</button>
+                </div>
+
+
+                <!-- === PASTRIES ITEMS === -->
+                <div class="card bg-neutral-800 p-4 rounded-xl border border-neutral-700 flex flex-col justify-between hidden" data-category="pastry">
+                    <div>
+                        <img src="ChocoChip Cookies.jpg" alt="Chocolate Chip Cookies" class="w-full h-48 object-cover rounded-lg mb-4 bg-neutral-700" onerror="this.src='https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=500'">
+                        <div class="text-lg font-bold text-white">Chocolate Chip Cookies</div>
+                        <div class="text-rose-400 font-bold mb-4">₱70.00</div>
+                    </div>
+                    <button class="btn-order" onclick="addToCart('Chocolate Chip Cookies', 70, 'ChocoChip Cookies.jpg')">ORDER NOW</button>
+                </div>
+
+                <div class="card bg-neutral-800 p-4 rounded-xl border border-neutral-700 flex flex-col justify-between hidden" data-category="pastry">
+                    <div>
+                        <img src="UbePandesal.jpg" alt="Ube Pandesal" class="w-full h-48 object-cover rounded-lg mb-4 bg-neutral-700" onerror="this.src='https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=500'">
+                        <div class="text-lg font-bold text-white">Ube Pandesal</div>
+                        <div class="text-rose-400 font-bold mb-4">₱15.00</div>
+                    </div>
+                    <button class="btn-order" onclick="addToCart('Ube Pandesal', 15, 'UbePandesal.jpg')">ORDER NOW</button>
+                </div>
+
+                <div class="card bg-neutral-800 p-4 rounded-xl border border-neutral-700 flex flex-col justify-between hidden" data-category="pastry">
+                    <div>
+                        <img src="BananaBread.jpg" alt="Banana Bread" class="w-full h-48 object-cover rounded-lg mb-4 bg-neutral-700" onerror="this.src='https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=500'">
+                        <div class="text-lg font-bold text-white">Banana Bread</div>
+                        <div class="text-rose-400 font-bold mb-4">₱25.00</div>
+                    </div>
+                    <button class="btn-order" onclick="addToCart('Banana Bread', 25, 'BananaBread.jpg')">ORDER NOW</button>
+                </div>
+
+                <div class="card bg-neutral-800 p-4 rounded-xl border border-neutral-700 flex flex-col justify-between hidden" data-category="pastry">
+                    <div>
+                        <img src="FilipinoEnsaymada.jpg" alt="Filipino Ensaymada" class="w-full h-48 object-cover rounded-lg mb-4 bg-neutral-700" onerror="this.src='https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=500'">
+                        <div class="text-lg font-bold text-white">Filipino Ensaymada</div>
+                        <div class="text-rose-400 font-bold mb-4">₱20.00</div>
+                    </div>
+                    <button class="btn-order" onclick="addToCart('Filipino Ensaymada', 20, 'FilipinoEnsaymada.jpg')">ORDER NOW</button>
+                </div>
+
             </div>
 
         </div>
-    </section>
 
+    </div>
+
+    <!-- JavaScript Filtering Logic -->
+    <script>
+        function filterMenu(category) {
+            const cards = document.querySelectorAll('.card');
+            const btnHot = document.getElementById('filter-hot');
+            const btnSignature = document.getElementById('filter-signature');
+            const btnTea = document.getElementById('filter-tea');
+            const btnPastry = document.getElementById('filter-pastry');
+
+            const defaultClass = "px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-neutral-700 bg-neutral-800 text-gray-300 hover:bg-orange-600 hover:text-white transition-all shadow-md flex items-center gap-2";
+            const activeClass = "px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-neutral-700 bg-orange-600 text-white transition-all shadow-md flex items-center gap-2";
+
+            // Reset all filter buttons
+            btnHot.className = defaultClass;
+            btnSignature.className = defaultClass;
+            btnTea.className = defaultClass;
+            btnPastry.className = defaultClass;
+
+            // Activate clicked filter button
+            if (category === 'hot') {
+                btnHot.className = activeClass;
+            } else if (category === 'signature') {
+                btnSignature.className = activeClass;
+            } else if (category === 'tea') {
+                btnTea.className = activeClass;
+            } else if (category === 'pastry') {
+                btnPastry.className = activeClass;
+            }
+
+            // Show matching cards and hide others
+            cards.forEach(card => {
+                if (card.getAttribute('data-category') === category) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
+    <!-- JavaScript Filtering Logic -->
+    <script>
+        function filterMenu(category) {
+            const cards = document.querySelectorAll('.card');
+            const btnHot = document.getElementById('filter-hot');
+            const btnSignature = document.getElementById('filter-signature');
+            const btnTea = document.getElementById('filter-tea');
+            const btnPastry = document.getElementById('filter-pastry');
+
+            const defaultClass = "px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-neutral-700 bg-neutral-800 text-gray-300 hover:bg-orange-600 hover:text-white transition-all shadow-md flex items-center gap-2";
+            const activeClass = "px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-neutral-700 bg-orange-600 text-white transition-all shadow-md flex items-center gap-2";
+
+            // Reset all filter buttons
+            btnHot.className = defaultClass;
+            btnSignature.className = defaultClass;
+            btnTea.className = defaultClass;
+            btnPastry.className = defaultClass;
+
+            // Activate clicked filter button
+            if (category === 'hot') {
+                btnHot.className = activeClass;
+            } else if (category === 'signature') {
+                btnSignature.className = activeClass;
+            } else if (category === 'tea') {
+                btnTea.className = activeClass;
+            } else if (category === 'pastry') {
+                btnPastry.className = activeClass;
+            }
+
+            // Show matching cards and hide others
+            cards.forEach(card => {
+                if (card.getAttribute('data-category') === category) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+
+    <!-- JavaScript Filtering Logic -->
+    <script>
+        function filterMenu(category) {
+            const cards = document.querySelectorAll('.card');
+            const btnHot = document.getElementById('filter-hot');
+            const btnSignature = document.getElementById('filter-signature');
+            const btnTea = document.getElementById('filter-tea');
+            const btnPastry = document.getElementById('filter-pastry');
+
+            const defaultClass = "px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-neutral-700 bg-neutral-800 text-gray-300 hover:bg-orange-600 hover:text-white transition-all shadow-md flex items-center gap-2";
+            const activeClass = "px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-neutral-700 bg-orange-600 text-white transition-all shadow-md flex items-center gap-2";
+
+            // Reset all filter buttons
+            btnHot.className = defaultClass;
+            btnSignature.className = defaultClass;
+            btnTea.className = defaultClass;
+            btnPastry.className = defaultClass;
+
+            // Activate clicked filter button
+            if (category === 'hot') {
+                btnHot.className = activeClass;
+            } else if (category === 'signature') {
+                btnSignature.className = activeClass;
+            } else if (category === 'tea') {
+                btnTea.className = activeClass;
+            } else if (category === 'pastry') {
+                btnPastry.className = activeClass;
+            }
+
+            // Show matching cards and hide others
+            cards.forEach(card => {
+                if (card.getAttribute('data-category') === category) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+
+    <!-- JavaScript para sa Filtering at Cart Logic -->
+    <script>
+        function filterMenu(category) {
+            const cards = document.querySelectorAll('.card');
+            const btnHot = document.getElementById('filter-hot');
+            const btnSignature = document.getElementById('filter-signature');
+            const btnTea = document.getElementById('filter-tea');
+
+            // I-reset ang kulay ng lahat ng filter buttons sa gray/default
+            const defaultClass = "px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-neutral-700 bg-neutral-800 text-gray-300 hover:bg-orange-600 hover:text-white transition-all shadow-md flex items-center gap-2";
+            const activeClass = "px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-neutral-700 bg-orange-600 text-white transition-all shadow-md flex items-center gap-2";
+
+            btnHot.className = defaultClass;
+            btnSignature.className = defaultClass;
+            btnTea.className = defaultClass;
+
+            // I-highlight ang napindot na button
+            if (category === 'hot') {
+                btnHot.className = activeClass;
+            } else if (category === 'signature') {
+                btnSignature.className = activeClass;
+            } else if (category === 'tea') {
+                btnTea.className = activeClass;
+            }
+
+            // I-show o i-hide ang mga card base sa kategorya
+            cards.forEach(card => {
+                if (card.getAttribute('data-category') === category) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
+
+
+        <!-- Right Side: Cart Drawer Sidebar -->
+        <div class="w-full lg:w-80 bg-neutral-800 border border-neutral-700 rounded-xl p-5 h-fit sticky top-6">
+            <h3 class="text-lg font-bold text-center border-b border-rose-500 pb-3 mb-4">
+                Shopping Cart (<span id="cart-count">0</span>)
+            </h3>
+            <div id="cart-items-container" class="space-y-3 max-h-96 overflow-y-auto pr-1">
+                <p class="empty-cart">Wala pang laman ang iyong cart.</p>
+            </div>
+            
+            <div id="cart-summary" class="mt-4 pt-3 border-t border-neutral-700 hidden">
+                <div class="flex justify-between font-bold text-sm mb-4">
+                    <span>Total:</span>
+                    <span id="cart-total" class="text-rose-400">₱0.00</span>
+                </div>
+                <button onclick="alert('Checkout successful!')" class="w-full py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg transition-colors">
+                    Proceed to Checkout
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JavaScript para sa Filtering at Cart System -->
+    <script>
+        let cartItems = [];
+
+        function filterMenu(category) {
+            const cards = document.querySelectorAll('.card');
+            const btnHot = document.getElementById('filter-hot');
+            const btnSignature = document.getElementById('filter-signature');
+
+            // I-update ang kulay ng filter buttons para malaman kung alin ang pinindot
+            if (category === 'hot') {
+                btnHot.className = "px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-neutral-700 bg-orange-600 text-white transition-all shadow-md flex items-center gap-2";
+                btnSignature.className = "px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-neutral-700 bg-neutral-800 text-gray-300 hover:bg-orange-600 hover:text-white transition-all shadow-md flex items-center gap-2";
+            } else {
+                btnSignature.className = "px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-neutral-700 bg-orange-600 text-white transition-all shadow-md flex items-center gap-2";
+                btnHot.className = "px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-neutral-700 bg-neutral-800 text-gray-300 hover:bg-orange-600 hover:text-white transition-all shadow-md flex items-center gap-2";
+            }
+
+            // I-hide o i-show ang mga kape base sa piniling kategorya
+            cards.forEach(card => {
+                if (card.getAttribute('data-category') === category) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        function addToCart(name, price, image) {
+            cartItems.push({ name, price, image });
+            
+            // I-update ang counter sa cart title
+            document.getElementById('cart-count').innerText = cartItems.length;
+
+            updateCartDrawer();
+        }
+
+        function updateCartDrawer() {
+            const container = document.getElementById('cart-items-container');
+            const cartSummary = document.getElementById('cart-summary');
+            
+            if (cartItems.length === 0) {
+                container.innerHTML = `<p class="empty-cart">Wala pang laman ang iyong cart.</p>`;
+                cartSummary.classList.add('hidden');
+                return;
+            }
+
+            container.innerHTML = '';
+            let total = 0;
+
+            cartItems.forEach(item => {
+                total += item.price;
+                const itemElement = document.createElement('div');
+                itemElement.className = 'flex items-center gap-3 bg-neutral-900 p-2 rounded-lg border border-neutral-700';
+                itemElement.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" class="w-12 h-12 object-cover rounded-md" onerror="this.src='https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=100'">
+                    <div class="flex-1">
+                        <h4 class="text-sm font-semibold text-white">${item.name}</h4>
+                        <p class="text-xs text-rose-400 font-bold">₱${item.price.toFixed(2)}</p>
+                    </div>
+                `;
+                container.appendChild(itemElement);
+            });
+
+            // I-update ang Total Price
+            document.getElementById('cart-total').innerText = `₱${total.toFixed(2)}`;
+            cartSummary.classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
+
+<script>
     <!-- About / Craft Section -->
     <section id="story" class="py-24 bg-espresso-800/30 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -276,141 +759,104 @@
 
             </div>
         </div>
-    </section>
+        </section>
 
-                    <!-- Coffee Flavor Recommendation -->
-<section id="quiz" class="py-20 bg-gradient-to-b from-espresso-900 to-espresso-800/60">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-espresso-800/80 border border-espresso-500/20 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur-md text-center">
+    function showCoffee(category) {
+        // Tanggalin ang active state sa lahat ng buttons
+        document.querySelectorAll('.temp-btn').forEach(b => b.classList.remove('border-amber-400', 'bg-espresso-900'));
+        
+        // I-active ang napiling button
+        if (category === 'tea') {
+            document.getElementById('btn-tea').classList.add('border-amber-400', 'bg-espresso-900');
+        } else {
+            document.getElementById('btn-cookie').classList.add('border-amber-400', 'bg-espresso-900');
+        }
 
-            <span class="text-gold font-semibold text-xs tracking-widest uppercase">Interactive Assistant</span>
-            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-cream mt-1">Find Your Perfect Cup</h2>
-            <p class="text-espresso-200 text-sm mt-2 mb-8">Hot or iced?</p>
-
-            <h3 class="text-lg font-medium text-cream mb-4">What temperature do you prefer?</h3>
-
-            <div class="grid grid-cols-2 gap-4 max-w-md mx-auto">
-                <button id="btn-hot" onclick="showCoffee('hot')" class="temp-btn p-4 rounded-xl border border-espresso-500/30 bg-espresso-900/50 hover:border-gold text-cream transition-all flex flex-col items-center gap-2 group">
-                    <i class="fa-solid fa-mug-hot text-2xl text-terracotta group-hover:scale-110 transition-transform"></i>
-                    <span class="text-sm font-medium">Warm & Cozy (Hot)</span>
-                </button>
-                <button id="btn-iced" onclick="showCoffee('iced')" class="temp-btn p-4 rounded-xl border border-espresso-500/30 bg-espresso-900/50 hover:border-gold text-cream transition-all flex flex-col items-center gap-2 group">
-                    <i class="fa-solid fa-snowflake text-2xl text-blue-400 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-sm font-medium">Chilled & Refreshing (Iced)</span>
-                </button>
-                   
-
-            </div>
-
-            <div id="coffee-results" class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 text-left"></div>
-
-        </div>
-    </div>
-</section>
-
-<script>
-
-    const coffees = [
-        { name: "Loko Americano",  temp: "hot",  price: 60, desc: "Espresso.",   img: "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=500&auto=format&fit=crop" },
-        { name: "Kanto Barako",    temp: "hot",  price: 70, desc: "Black Coffee, Sugar, Hot.", img: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=500&auto=format&fit=crop" },
-        { name: "Tambay Latte",    temp: "iced",  price: 95,  desc: "Espresso, Fresh ilk, Creamy, Iced.", img: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500&auto=format&fit=crop" },
-        { name: "Mochalye",     temp: "iced", price: 110, desc: "Espresso, Chocolate drip, Fresh milk, Iced.",     img: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=500&auto=format&fit=crop" },
-        { name: "Kape ni Otits", temp: "iced", price: 110, desc: "Espresso, Milk, Sea salt cream.", img: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&auto=format&fit=crop" },
-        { name: "Kape ni Auntie",      temp: "iced", price: 120, desc: "Espresso, Vanilla milk, Caramel drizzle.",         img: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&auto=format&fit=crop" },
-        { name: "Mango ni Chikito ", temp: "iced", price: 120, desc: "Mango purée, Fresh milk, Iced.", img: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&auto=format&fit=crop" },
-        { name: "Berry ni Merry",      temp: "iced", price: 125, desc: "Strawberry syrup, Fresh milk, Iced.",         img: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&auto=format&fit=crop" },
-        { name: "Asim Kilig ", temp: "iced", price: 60, desc: "Black tea, Calamnsi juice, sugar syrup, Ice.", img: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&auto=format&fit=crop" },
-        { name: "Oh! Honey",      temp: "iced", price: 75, desc: "Black tea, Honey, Ice, Lemon slices.",         img: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&auto=format&fit=crop" },
-        { name: "Peach-a-Boo ", temp: "iced", price: 110, desc: "Black tea, Peach syrup, Ice, sugar syrup.", img: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&auto=format&fit=crop" },
-        { name: "Matcha Muna ", temp: "iced", price: 115, desc: "Matcha powder, Fresh milk, Iced.", img: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&auto=format&fit=crop" },
-      
-    ];
-
-    function showCoffee(temp) {
-        document.querySelectorAll('.temp-btn').forEach(b => b.classList.remove('border-gold', 'bg-espresso-900'));
-        document.getElementById(temp === 'hot' ? 'btn-hot' : 'btn-iced').classList.add('border-gold', 'bg-espresso-900');
-
+        // I-filter at ipakita sa #coffee-results container
         const box = document.getElementById('coffee-results');
         box.innerHTML = coffees
-            .filter(c => c.temp === temp)
+            .filter(c => c.temp === category)
             .map(c => `
-                <div class="bg-espresso-900 rounded-2xl overflow-hidden border border-espresso-500/30 hover:border-gold transition-colors">
-                    <img src="${c.img}" alt="${c.name}" class="w-full h-44 object-cover" onerror="this.style.display='none'">
-                    <div class="p-4">
-                        <h4 class="font-serif text-xl font-bold text-cream">${c.name}</h4>
-                        <p class="text-xs text-espresso-200 mt-1">${c.desc}</p>
-                        <p class="text-gold font-bold mt-2">₱${c.price}</p>
-                    </div>
+                <div class="bg-espresso-900 rounded-2xl overflow-hidden border border-espresso-500/30 hover:border-amber-400 transition-colors p-4">
+                    <img src="${c.img}" alt="${c.name}" class="w-full h-44 object-cover rounded-lg mb-3" onerror="this.src='https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=500'">
+                    <h4 class="font-serif text-xl font-bold text-white">${c.name}</h4>
+                    <p class="text-xs text-gray-300 mt-1">${c.desc}</p>
+                    <p class="text-amber-400 font-bold mt-2">₱${c.price}</p>
                 </div>`)
             .join('');
     }
 </script>
+<!-- Location & Store Information Section -->
+<section id="location" class="py-24 bg-espresso-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Store Info Left -->
+            <div class="lg:col-span-5 space-y-6">
+                <span class="text-amber-400 font-semibold text-xs tracking-widest uppercase">Visit Us</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Find Your Kalye Moment</h2>
+                <p class="text-gray-300 text-sm sm:text-base">
+                    Step into Kalye Café, where good coffee, great food, and warm conversations come together.
+                </p>
 
-                
-    <!-- Location & Store Information Section -->
-    <section id="location" class="py-24 bg-espresso-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Store Info Left -->
-                <div class="lg:col-span-5 space-y-6">
-                    <span class="text-gold font-semibold text-xs tracking-widest uppercase">Visit Us</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-cream">Find Your Kalye Moment</h2>
-                    <p class="text-espresso-200 text-sm sm:text-base">
-                        Step into Kalye Café, where good coffee, great food, and warm conversations come together.
+                <!-- Realtime Open Status Indicator -->
+                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-espresso-800 border border-espresso-500/30">
+                    <span id="status-dot" class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span id="status-text" class="text-xs font-medium text-white">Checking Cafe Status...</span>
+                </div>
 
-                    </p>
-
-                    <!-- Realtime Open Status Indicator -->
-                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-espresso-800 border border-espresso-500/30">
-                        <span id="status-dot" class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
-                        <span id="status-text" class="text-xs font-medium text-cream">Checking Cafe Status...</span>
+                <!-- Hours & Contact Info Grid -->
+                <div class="space-y-4 pt-2 text-sm text-gray-300">
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot text-amber-400 mt-1"></i>
+                        <div>
+                            <p class="font-medium text-white">Flagship Cafe</p>
+                            <p class="text-xs">Near Quezon City University (QCU), San Bartolome, Quezon City, Metro Manila</p>
+                        </div>
                     </div>
-
-                    <!-- Hours & Contact Info Grid -->
-                    <div class="space-y-4 pt-2 text-sm text-espresso-200">
-                        <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-location-dot text-gold mt-1"></i>
-                            <div>
-                                <p class="font-medium text-cream Flagship Cafe</p>
-                                <p class="text-xs">Near Quezon City University (QCU), San Bartolome, Quezon City, Metro Manila
-</p>
-                            </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-clock text-amber-400 mt-1"></i>
+                        <div>
+                            <p class="font-medium text-white">Opening Hours</p>
+                            <p class="text-xs">Mon – Fri: 7:00 AM – 10:00 PM</p>
+                            <p class="text-xs">Sat – Sun: 7:00 AM – 11:00 PM</p>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-clock text-gold mt-1"></i>
-                            <div>
-                                <p class="font-medium text-cream">Opening Hours</p>
-                                <p class="text-xs">Mon – Fri: 7:00 AM – 10:00 PM</p>
-                                <p class="text-xs">Sat – Sun: 7:00 AM – 11:00 PM</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-phone text-gold mt-1"></i>
-                            <div>
-                                <p class="font-medium text-cream">Contact & Catering</p>
-                                <p class="text-xs">+63 917 123 4567 · kalyecafe@gmail.com</p>
-                            </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-phone text-amber-400 mt-1"></i>
+                        <div>
+                            <p class="font-medium text-white">Contact & Catering</p>
+                            <p class="text-xs">+63 917 123 4567 · kalyecafe@gmail.com</p>
                         </div>
                     </div>
                 </div>
+            </div> <!-- Naka-isara na nang tama ang div dito -->
 
-                <!-- Stylized Interactive Map / Visual Right -->
-                <div class="lg:col-span-7">
-                    <div class="relative w-full h-80 sm:h-96 rounded-3xl overflow-hidden border border-espresso-800 shadow-2xl bg-espresso-800 flex items-center justify-center group">
-                        <!-- Stylized Map Placeholder Visual -->
-                        <img src="PICTURES/5.1.jpg" alt="Cafe Interior Ambiance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-70">
-                        <div class="absolute inset-0 bg-gradient-to-t from-espresso-900 via-transparent to-transparent"></div>
+            <!-- Stylized Interactive Map / Visual Right -->
+            <div class="lg:col-span-7">
+                <div class="relative w-full h-80 sm:h-96 rounded-3xl overflow-hidden border border-gray-800 shadow-2xl bg-gray-800 flex items-center justify-center group">
+                    <img src="last.jpg" alt="Cafe Interior Ambiance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-70" onerror="this.src='https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    
+                    <!-- Map Marker Card Overlay -->
+                    <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-black/80 backdrop-blur-md border border-white/10 flex justify-between items-center">
+                        <div>
+                            <p class="text-xs font-bold text-white">Kalye Cafe</p>
+                            <p class="text-[11px] text-gray-300">Free High-Speed Wi-Fi • Outdoor Seating</p>
+                        </div>
+                        <a href="https://www.google.com/maps/place/Quezon+City+University+-+Main/@14.6999714,121.0299872,17z/data=!3m1!4b1!4m6!3m5!1s0x3397b0d899095555:0x523cb309be95e9a6!8m2!3d14.6999662!4d121.0325621!16s%2Fm%2F0czbj84?entry=ttu&g_ep=EgoyMDI2MTEwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="px-4 py-2 rounded-full bg-amber-400/20 hover:bg-amber-400 text-amber-400 hover:text-black text-xs font-bold transition-colors">
+                            Get Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
                         
-                        <!-- Map Marker Card Overlay -->
-                        <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-espresso-900/90 backdrop-blur-md border border-espresso-500/30 flex justify-between items-center">
-                            <div>
-                                <p class="text-xs font-bold text-cream">Kalye Cafe</p>
-                                <p class="text-[11px] text-espresso-200">Free High-Speed Wi-Fi • Outdoor Seating</p>
+                      
                             </div>
-                            <a href="https://maps.google.com" target="_blank" rel="noopener" class="px-4 py-2 rounded-full bg-gold/20 hover:bg-gold text-gold hover:text-espresso-900 text-xs font-bold transition-colors">
-                                Get Directions
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -421,15 +867,15 @@
 
     <!-- Sliding Cart Drawer -->
     <div id="cart-drawer" class="fixed inset-y-0 right-0 max-w-full flex pl-10 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
-        <div class="w-screen max-w-md bg-espresso-900 border-l border-espresso-800 shadow-2xl flex flex-col">
+        <div class="w-screen max-w-md bg-neutral-900 border-l border-neutral-800 shadow-2xl flex flex-col">
             
             <!-- Drawer Header -->
-            <div class="p-6 border-b border-espresso-800 flex items-center justify-between">
+            <div class="p-6 border-b border-neutral-800 flex items-center justify-between">
                 <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-bag-shopping text-gold"></i>
-                    <h3 class="font-serif text-xl font-bold text-cream">Your Coffee Tray</h3>
+                    <i class="fa-solid fa-bag-shopping text-amber-400"></i>
+                    <h3 class="font-serif text-xl font-bold text-white">Your Coffee Tray</h3>
                 </div>
-                <button id="cart-close-btn" class="text-espresso-200 hover:text-cream p-2">
+                <button id="cart-close-btn" class="text-gray-300 hover:text-white p-2">
                     <i class="fa-solid fa-xmark text-xl"></i>
                 </button>
             </div>
@@ -440,23 +886,23 @@
             </div>
 
             <!-- Drawer Footer / Checkout -->
-            <div class="p-6 border-t border-espresso-800 bg-espresso-900/90 space-y-4">
+            <div class="p-6 border-t border-neutral-800 bg-neutral-900/90 space-y-4">
                 <div class="space-y-1.5 text-sm">
-                    <div class="flex justify-between text-espresso-200">
+                    <div class="flex justify-between text-gray-300">
                         <span>Subtotal</span>
-                        <span id="cart-subtotal" class="text-cream font-semibold">$0.00</span>
+                        <span id="cart-subtotal" class="text-white font-semibold">₱0.00</span>
                     </div>
-                    <div class="flex justify-between text-espresso-200">
+                    <div class="flex justify-between text-gray-300">
                         <span>Estimated Tax</span>
-                        <span id="cart-tax" class="text-cream font-semibold">$0.00</span>
+                        <span id="cart-tax" class="text-white font-semibold">₱0.00</span>
                     </div>
-                    <div class="flex justify-between text-base font-bold text-cream pt-2 border-t border-espresso-800">
+                    <div class="flex justify-between text-base font-bold text-white pt-2 border-t border-neutral-800">
                         <span>Total</span>
-                        <span id="cart-total" class="text-gold">$0.00</span>
+                        <span id="cart-total" class="text-amber-400">₱0.00</span>
                     </div>
                 </div>
 
-                <button id="checkout-btn" class="w-full py-3.5 rounded-full bg-terracotta hover:bg-terracotta-hover text-cream font-bold text-sm transition-all shadow-lg hover:shadow-terracotta/20 flex items-center justify-center gap-2">
+                <button id="checkout-btn" class="w-full py-3.5 rounded-full bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm transition-all shadow-lg flex items-center justify-center gap-2">
                     <span>Proceed to Checkout</span>
                     <i class="fa-solid fa-arrow-right text-xs"></i>
                 </button>
@@ -464,77 +910,144 @@
 
         </div>
     </div>
+
     <!-- Cart Overlay Backdrop -->
     <div id="cart-backdrop" class="fixed inset-0 bg-black/60 z-40 hidden backdrop-blur-sm transition-opacity"></div>
 
     <!-- Footer Section -->
-    <footer class="bg-espresso-950 text-espresso-200 border-t border-espresso-800/60 pt-16 pb-12">
+    <footer class="bg-black text-gray-300 border-t border-neutral-800 pt-16 pb-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-espresso-800/60">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-neutral-800">
                 
                 <!-- Col 1: Brand Info -->
                 <div class="space-y-4 md:col-span-1">
                     <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-full bg-terracotta flex items-center justify-center text-cream font-serif font-bold">A</div>
-                        <span class="font-serif text-xl font-bold text-cream tracking-wide">Kalye Cafe</span>
+                        <div class="w-8 h-8 rounded-full bg-orange-600 flex items-center justify-center text-white font-serif font-bold">K</div>
+                        <span class="font-serif text-xl font-bold text-white tracking-wide">Kalye Cafe</span>
                     </div>
-                    <p class="text-xs text-espresso-200 leading-relaxed">
+                    <p class="text-xs text-gray-400 leading-relaxed">
                         Serving handcrafted coffee, refreshing signature drinks, locally inspired flavors, and freshly baked treats. Your neighborhood spot for good coffee and cozy moments.
                     </p>
-                    <div class="flex space-x-3 pt-2">
-                        <a href="#" class="w-8 h-8 rounded-full bg-espresso-800 flex items-center justify-center text-espresso-200 hover:text-gold hover:bg-espresso-800 transition-colors"><i class="fa-brands fa-instagram text-sm"></i></a>
-                        <a href="#" class="w-8 h-8 rounded-full bg-espresso-800 flex items-center justify-center text-espresso-200 hover:text-gold hover:bg-espresso-800 transition-colors"><i class="fa-brands fa-facebook-f text-sm"></i></a>
-                        <a href="#" class="w-8 h-8 rounded-full bg-espresso-800 flex items-center justify-center text-espresso-200 hover:text-gold hover:bg-espresso-800 transition-colors"><i class="fa-brands fa-twitter text-sm"></i></a>
-                    </div>
+                    <ul class="flex space-x-3 pt-2 items-center list-none p-0 m-0">
+    <!-- Instagram -->
+    <li>
+        <a href="https://www.instagram.com/kalyecafee?xtok=MWt5NHd0cnNyNDh3bw%3D%3D&fbclid=IwY2xjawVg6o5leHRuA2FlbQIxMABwZG9mBWJyaWQRMXYzell6MlJYb0VySUtkd1lzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfm8DsRKqWo4f8zuDb1UFkAXzbJWWqtkZJEG_ybVrwtsOyKqHvfkvNEaQXuOw_aem_py9wLupnp4iF2fIeb8zpSw" 
+           target="_blank" 
+           rel="noopener" 
+           class="w-8 h-8 rounded-full bg-neutral-800 flex items-center justify-center text-gray-300 hover:text-amber-400 transition-colors">
+            <i class="fa-brands fa-instagram text-sm"></i>
+        </a>
+    </li>
+
+    <!-- Facebook -->
+    <li>
+        <a href="https://www.facebook.com/profile.php?id=61596644992459&rdid=UjUAvtir0RDvRhLa&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19vkzmqHBW#" 
+           target="_blank" 
+           rel="noopener" 
+           class="w-8 h-8 rounded-full bg-neutral-800 flex items-center justify-center text-gray-300 hover:text-amber-400 transition-colors">
+            <i class="fa-brands fa-facebook-f text-sm"></i>
+        </a>
+    </li>
+
+    <!-- TikTok -->
+    <li>
+        <a href="https://www.tiktok.com/@officialkalyecafe?fbclid=IwY2xjawVg6l1leHRuA2FlbQIxMABwZG9mBWJyaWQRMXYzell6MlJYb0VySUtkd1lzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfpyAvA-acXNIWarDY0hg0llW4ATjpUQj2zAbEnmOoM6l2aSYDqnp_OuDLiK0_aem_JHlPm0NG2iV40qfK6SxiQg" 
+           target="_blank" 
+           rel="noopener" 
+           class="w-8 h-8 rounded-full bg-neutral-800 flex items-center justify-center text-gray-300 hover:text-amber-400 transition-colors">
+            <i class="fa-brands fa-tiktok text-sm"></i>
+        </a>
+    </li>
+
+    <!-- Gmail -->
+    <li>
+        <a href="mailto:kalyecafeofficial@gmail.com" 
+           class="w-8 h-8 rounded-full bg-neutral-800 flex items-center justify-center text-gray-300 hover:text-amber-400 transition-colors">
+            <i class="fa-solid fa-envelope text-sm"></i>
+        </a>
+    </li>
+</ul>
                 </div>
 
                 <!-- Col 2: Navigation -->
                 <div class="space-y-3">
-                    <h4 class="font-serif text-sm font-bold text-cream uppercase tracking-wider">Quick Links</h4>
+                    <h4 class="font-serif text-sm font-bold text-white uppercase tracking-wider">Quick Links</h4>
                     <ul class="space-y-2 text-xs">
-                        <li><a href="#hero" class="hover:text-gold transition-colors">Home</a></li>
-                        <li><a href="#menu" class="hover:text-gold transition-colors">Kape menu</a></li>
-                        <li><a href="#story" class="hover:text-gold transition-colors">Our Craft & Story</a></li>
-                        <li><a href="#quiz" class="hover:text-gold transition-colors">Brew Finder Quiz</a></li>
-                        <li><a href="#location" class="hover:text-gold transition-colors">Cafe Locations</a></li>
+                        <li><a href="#hero" class="hover:text-amber-400 transition-colors">Home</a></li>
+                        <li><a href="#menu" class="hover:text-amber-400 transition-colors">Kape menu</a></li>
+                        <li><a href="#location" class="hover:text-amber-400 transition-colors">Cafe Locations</a></li>
                     </ul>
                 </div>
 
                 <!-- Col 3: Offerings -->
                 <div class="space-y-3">
-                    <h4 class="font-serif text-sm font-bold text-cream uppercase tracking-wider">Specialties</h4>
+                    <h4 class="font-serif text-sm font-bold text-white uppercase tracking-wider">Specialties</h4>
                     <ul class="space-y-2 text-xs">
-                        <li><span class="hover:text-gold transition-colors cursor-pointer">Kape ni Auntie </span></li>
-                        <li><span class="hover:text-gold transition-colors cursor-pointer">Kape ni Otits</span></li>
-                        <li><span class="hover:text-gold transition-colors cursor-pointer">Mango ni Chikito</span></li>
-                        <li><span class="hover:text-gold transition-colors cursor-pointer">Berry ni Merry</span></li>
+                        <li><span class="hover:text-amber-400 transition-colors cursor-pointer">Kape ni Auntie</span></li>
+                        <li><span class="hover:text-amber-400 transition-colors cursor-pointer">Kape ni Otits</span></li>
+                        <li><span class="hover:text-amber-400 transition-colors cursor-pointer">Mango ni Chikito</span></li>
+                        <li><span class="hover:text-amber-400 transition-colors cursor-pointer">Berry ni Merry</span></li>
                     </ul>
                 </div>
 
                 <!-- Col 4: Newsletter -->
                 <div class="space-y-3">
-                    <h4 class="font-serif text-sm font-bold text-cream uppercase tracking-wider">Stay Connected</h4>
-                    <p class="text-xs text-espresso-200">Stay updated with KALYE CAFÉ! Subscribe for new drink releases, special promotions, seasonal flavors, and exclusive café updates.</p>
+                    <h4 class="font-serif text-sm font-bold text-white uppercase tracking-wider">Stay Connected</h4>
+                    <p class="text-xs text-gray-400">Stay updated with KALYE CAFÉ! Subscribe for new drink releases, special promotions, and seasonal flavors.</p>
                     <form class="space-y-2 pt-1" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
-                        <input type="email" placeholder="Your email address" required class="w-full px-4 py-2.5 rounded-xl bg-espresso-900 border border-espresso-800 text-xs text-cream placeholder-espresso-500 focus:outline-none focus:border-gold">
-                        <button type="submit" class="w-full py-2.5 rounded-xl bg-terracotta hover:bg-terracotta-hover text-cream text-xs font-semibold transition-colors">Subscribe</button>
+                        <input type="email" placeholder="Your email address" required class="w-full px-4 py-2.5 rounded-xl bg-neutral-900 border border-neutral-800 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-amber-400">
+                        <button type="submit" class="w-full py-2.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white text-xs font-semibold transition-colors">Subscribe</button>
                     </form>
                 </div>
 
             </div>
 
-            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-espresso-500 gap-4">
-                <p>&copy; 2026 Kalye Cafe. All rights reserved.</p>
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+                <p>© 2026 Kalye Cafe. All rights reserved.</p>
                 <div class="flex space-x-6">
-                    <a href="#" class="hover:text-espresso-200 transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-espresso-200 transition-colors">Terms of Service</a>
-                    <a href="#" class="hover:text-espresso-200 transition-colors">Cookie Settings</a>
+                    <a href="#" class="hover:text-gray-300 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-gray-300 transition-colors">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript Scripts -->
+    <script>
+        const coffees = [
+            { name: "Loko Americano", temp: "hot", price: 60, desc: "Espresso.", img: "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=500&auto=format&fit=crop" },
+            { name: "Kanto Barako", temp: "hot", price: 70, desc: "Black Coffee, Sugar, Hot.", img: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=500&auto=format&fit=crop" },
+            { name: "Tambay Latte", temp: "iced", price: 95, desc: "Espresso, Fresh milk, Creamy, Iced.", img: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500&auto=format&fit=crop" },
+            { name: "Mochalye", temp: "iced", price: 110, desc: "Espresso, Chocolate drip, Fresh milk, Iced.", img: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=500&auto=format&fit=crop" },
+            { name: "Kape ni Otits", temp: "iced", price: 110, desc: "Espresso, Milk, Sea salt cream.", img: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&auto=format&fit=crop" },
+            { name: "Kape ni Auntie", temp: "iced", price: 120, desc: "Espresso, Vanilla milk, Caramel drizzle.", img: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&auto=format&fit=crop" },
+            { name: "Mango ni Chikito", temp: "iced", price: 120, desc: "Mango purée, Fresh milk, Iced.", img: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&auto=format&fit=crop" },
+            { name: "Berry ni Merry", temp: "iced", price: 125, desc: "Strawberry syrup, Fresh milk, Iced.", img: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&auto=format&fit=crop" },
+            { name: "Asim Kilig", temp: "iced", price: 60, desc: "Black tea, Calamansi juice, sugar syrup, Ice.", img: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&auto=format&fit=crop" },
+            { name: "Oh! Honey", temp: "iced", price: 75, desc: "Black tea, Honey, Ice, Lemon slices.", img: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&auto=format&fit=crop" },
+            { name: "Peach-a-Boo", temp: "iced", price: 110, desc: "Black tea, Peach syrup, Ice, sugar syrup.", img: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&auto=format&fit=crop" },
+            { name: "Matcha Muna", temp: "iced", price: 115, desc: "Matcha powder, Fresh milk, Iced.", img: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&auto=format&fit=crop" }
+        ];
+
+        function showCoffee(temp) {
+            document.querySelectorAll('.temp-btn').forEach(b => b.classList.remove('border-amber-400', 'bg-neutral-800'));
+            document.getElementById(temp === 'hot' ? 'btn-hot' : 'btn-iced').classList.add('border-amber-400', 'bg-neutral-800');
+
+            const box = document.getElementById('coffee-results');
+            box.innerHTML = coffees
+                .filter(c => c.temp === temp)
+                .map(c => `
+                    <div class="bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-800 hover:border-amber-400 transition-colors">
+                        <img src="${c.img}" alt="${c.name}" class="w-full h-44 object-cover" onerror="this.style.display='none'">
+                        <div class="p-4">
+                            <h4 class="font-serif text-xl font-bold text-white">${c.name}</h4>
+                            <p class="text-xs text-gray-300 mt-1">${c.desc}</p>
+                            <p class="text-amber-400 font-bold mt-2">₱${c.price}</p>
+                        </div>
+                    </div>`)
+                .join('');
+        }
+    </script>
+    <script src="java.js"></script>
 </body>
 </html>
-
-
